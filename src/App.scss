@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar {
+  background-color: #e91e63;
+  padding: 20px;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+#pedido {
+  display: flex;
+  flex-wrap: wrap;
+
+  & div {
+    width: 100%;
+
+    h2 {
+      color: #e91e63;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2%;
+
+      & li {
+        max-width: 48%;
+      }
+    }
+  }
+
+
+  .bolo-no-pote,
+  .trufa-tradicional,
+  .trufa-personalizada,
+  .tortas,
+  .tortas-personalizadas {
+    @media (min-width: 768px) {
+      width: 50%;
+    }
+  }
+
+  .bolo-no-pote {
+    background-color: #f8bbd0;
+  }
+
+  .trufa-tradicional {
+    background-color: #795548;
+  }
+
+  .trufa-personalizada {
+    background-color: #d7ccc8;
+  }
+
+  .tortas {
+    background-color: #bcaaa4;
+  }
+
+  .tortas-personalizadas {
+    background-color: #c5cae9;
+  }
+
+  button {
+    display: inline-block;
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: #c2185b;
+    }
+  }
+}
